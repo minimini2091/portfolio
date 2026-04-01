@@ -19,6 +19,15 @@ body {
     padding: 60px 20px;
 }
 
+.profile {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
 h1 {
     font-size: 34px;
     margin-bottom: 12px;
@@ -71,7 +80,7 @@ p {
 
 .link {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 14px;
     color: #4f46e5;
     text-decoration: none;
@@ -100,12 +109,14 @@ p {
 
 <div class="container">
 
+    <!-- PROFILE -->
+    <img src="profile.jpg" alt="profile" class="profile">
+
     <!-- INTRO -->
-    <h1>데이터로 문제를 구조화하는 AX 컨설팅 지원자</h1>
+    <h1>데이터를 통해 문제를 정의하고, 실행 가능한 해결책으로 전환하는 AX 컨설팅 지원자</h1>
     <p>
-        단순한 분석을 넘어, 데이터로 문제를 정의하고 실행 가능한 해결책으로 연결하는 것에 집중합니다.  
-        반복적인 업무는 자동화하고, 의사결정에 필요한 핵심 정보만 남기는 구조를 만드는 경험을 쌓아왔습니다.  
-        AX 컨설팅 직무에서 데이터 기반 문제 해결과 프로세스 개선 역량을 발휘하고자 합니다.
+        단순한 분석을 넘어, 데이터로 문제를 구조화하고 실행 가능한 해결책으로 연결하는 것에 집중합니다.<br>
+        반복적인 업무는 자동화하고, 의사결정에 필요한 핵심 정보만 남기는 구조를 만드는 경험을 쌓아왔습니다.
     </p>
 
     <!-- PROJECTS -->
@@ -117,12 +128,23 @@ p {
             외식물가지수와 배달앱 이용금액 상관관계 분석
         </div>
         <p>
-            외식 물가 상승이 배달 소비 증가로 이어지는지 검증하기 위해 공공 데이터를 활용해 분석을 수행했습니다.  
-            시계열 데이터 정제 및 상관관계 분석을 통해 소비 패턴 변화 인사이트를 도출했습니다.
+            외식 물가 상승이 배달 소비 증가로 이어지는지 검증하기 위해 공공 데이터를 활용해 분석을 수행했습니다.<br><br>
+
+            - 데이터 정제 및 시계열 기준 정렬 수행<br>
+            - 상관관계 분석을 통해 두 변수 간 관계 검증<br>
+            - 외식물가지수 상승 구간에서 배달 이용금액 증가 경향 확인
         </p>
+
+        <p><strong>Key Insight:</strong> 외식 물가 상승 구간에서 배달 소비 증가 경향 확인</p>
+
         <div class="tag">Python</div>
         <div class="tag">Pandas</div>
         <div class="tag">Data Analysis</div>
+
+        <br>
+        <a href="https://github.com/minimini2091" target="_blank" class="link">
+            프로젝트 코드 보기 →
+        </a>
     </div>
 
     <!-- PROJECT 2 -->
@@ -131,12 +153,24 @@ p {
             일간 뉴스 브리핑 자동화 파이프라인
         </div>
         <p>
-            뉴스 수집 → 요약 → 전달까지의 과정을 자동화하여 정보 탐색 시간을 단축했습니다.  
-            반복 업무를 제거하고 핵심 정보 중심으로 재구성하는 시스템을 설계했습니다.
+            뉴스 수집부터 요약까지 반복되는 정보 탐색 과정을 자동화하여 의사결정 효율을 개선했습니다.<br><br>
+
+            - 뉴스 API 기반 데이터 수집 자동화<br>
+            - 텍스트 요약 로직 적용<br>
+            - 핵심 정보 중심 브리핑 구조 설계<br>
+            - 반복 작업 제거를 통한 시간 효율 개선
         </p>
+
+        <p><strong>Key Result:</strong> 반복 정보 탐색 시간 절감 및 업무 효율 향상</p>
+
         <div class="tag">Automation</div>
         <div class="tag">Python</div>
         <div class="tag">API</div>
+
+        <br>
+        <a href="https://github.com/minimini2091" target="_blank" class="link">
+            프로젝트 코드 보기 →
+        </a>
     </div>
 
     <!-- LINKS -->
