@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif;
+    background: #f9fafb;
+    color: #111;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    margin-top: 60px;
+    font-size: 22px;
+}
+
+p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    margin-top: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 80px;
+    font-size: 14px;
+    color: #888;
+}
+
+.email {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4f46e5;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <h1>데이터로 문제를 구조화하는 AX 컨설팅 지원자</h1>
+    <p>
+        단순한 분석을 넘어, 데이터로 문제를 정의하고 실행 가능한 해결책으로 연결하는 것에 집중합니다.  
+        반복적인 업무는 자동화하고, 의사결정에 필요한 핵심 정보만 남기는 구조를 만드는 경험을 쌓아왔습니다.  
+        AX 컨설팅 직무에서 데이터 기반 문제 해결과 프로세스 개선 역량을 발휘하고자 합니다.
+    </p>
+
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+
+    <!-- PROJECT 1 -->
+    <div class="card">
+        <div class="project-title">
+            외식물가지수와 배달앱 이용금액 상관관계 분석
+        </div>
+        <p>
+            외식 물가 상승이 배달 소비 증가로 이어지는지 검증하기 위해 공공 데이터를 활용해 분석을 수행했습니다.  
+            시계열 데이터 정제 및 상관관계 분석을 통해 소비 패턴 변화 인사이트를 도출했습니다.
+        </p>
+        <div class="tag">Python</div>
+        <div class="tag">Pandas</div>
+        <div class="tag">Data Analysis</div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card">
+        <div class="project-title">
+            일간 뉴스 브리핑 자동화 파이프라인
+        </div>
+        <p>
+            뉴스 수집 → 요약 → 전달까지의 과정을 자동화하여 정보 탐색 시간을 단축했습니다.  
+            반복 업무를 제거하고 핵심 정보 중심으로 재구성하는 시스템을 설계했습니다.
+        </p>
+        <div class="tag">Automation</div>
+        <div class="tag">Python</div>
+        <div class="tag">API</div>
+    </div>
+
+    <!-- LINKS -->
+    <h2>Links</h2>
+    <a href="https://github.com/minimini2091" target="_blank" class="link">
+        GitHub 바로가기 →
+    </a>
+
+    <!-- CONTACT -->
+    <h2>Contact</h2>
+    <a href="mailto:your@email.com" class="email">
+        your@email.com
+    </a>
+
+    <div class="footer">
+        © 2026 Portfolio
+    </div>
+
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+cards.forEach(card => {
+    observer.observe(card);
+});
+</script>
+
+</body>
+</html>
